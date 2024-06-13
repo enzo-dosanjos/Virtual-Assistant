@@ -9,7 +9,7 @@ from colorama import Fore, Style
 def login():
     r = requests.Session()
     url = "https://api.ecoledirecte.com/v3/login.awp"
-    payload = "data={\n\t\"identifiant\": \"Enzo.DosAnjos\",\n\t\"motdepasse\": \"Enzo2909\"\n}"
+    payload = "data={\n\t\"identifiant\": \"<votre identifiant>\",\n\t\"motdepasse\": \"<votre mot de passe>\"\n}"
     try:
         res = r.post(url, data=payload)
         return res.json()['token']
